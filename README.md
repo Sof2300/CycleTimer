@@ -47,13 +47,24 @@ This project uses a custom library framework. Ensure you have the following in y
 
 ### Compilation
 
+#### Arduino (ESP8266/ESP32)
+
 1. Clone or download this repository
 2. Open `CycleTimer.ino` in Arduino IDE
 3. Select your board (ESP8266 or ESP32) from Tools > Board
 4. Select the correct COM port
 5. Click Upload
 
-**Note**: The code includes an x86 build file (`CycleTimerx86.c++`) for testing on desktop systems.
+#### x86 Desktop Build (Debugging)
+
+The project includes `CycleTimerx86.c++` for compilation and testing on desktop systems (x86 architecture). 
+To compile for x86, use a standard C++ compiler:
+```bash
+g++ CycleTimerx86.c++ -o CycleTimerx86
+./CycleTimerx86
+```
+
+**Note**: The x86 build simulates the hardware environment but may have limitations in testing hardware-specific features (GPIO, WiFi, timers).
 
 ## Usage
 
